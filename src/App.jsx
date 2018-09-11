@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import Button from './components/Button.jsx';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(e) {
+    alert("Clicked!!");
+  }
+
   render() {
     return (
       <div className="App">
@@ -8,8 +17,9 @@ class App extends Component {
           <h1 className="App-title">My Github Favorites</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.jsx</code> and save to reload.
+          What?!
         </p>
+        <Button handleClick={this.handleClick}/>
       </div>
     );
   }
